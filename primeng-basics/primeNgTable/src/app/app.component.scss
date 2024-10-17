@@ -1,0 +1,19 @@
+h3 {
+    margin: 1rem;
+    font-family: consolas;
+}
+
+.table-container {
+    margin: 1rem;
+    border: 1px solid black;
+
+    .p-datatable {
+        .p-datatable-thead{
+            tr {
+                th {
+                    padding: 0.5rem 1rem !important;
+                }
+            }
+        }
+    } 
+}

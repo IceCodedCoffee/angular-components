@@ -1,0 +1,218 @@
+<h3>1. Basic table</h3>
+<div class="table-container">
+    <p-table [value]="products" styleClass="p-datatable-gridlines p-datatable-striped" [tableStyle]="{ 'min-width': '50rem' }">
+      <ng-template pTemplate="header">
+          <tr>
+              <th>Code <br><br> Test <br> Test</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Quantity</th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-product>
+          <tr>
+              <td>{{ product.code }} <br><br> {{ product.code }} <br> {{ product.code }} </td>
+              <td>{{ product.name }}</td>
+              <td>{{ product.category}}</td>
+              <td>{{ product.quantity }}</td>
+          </tr>
+      </ng-template>
+    </p-table>
+</div>
+<br>
+
+<h3>2. Dynamic columns table</h3>
+<div class="table-container">
+    <p-table [columns]="cols" [value]="products" styleClass="p-datatable-gridlines p-datatable-striped" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <th *ngFor="let col of columns">
+                    {{ col.header }}
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+            <tr>
+                <td *ngFor="let col of columns">
+                    {{ rowData[col.field] }}
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+<br>
+
+<h3>3. Dynamic columns table with pagination</h3>
+<div class="table-container">
+    <p-table 
+        [columns]="cols" 
+        [value]="products"
+        [paginator]="true"
+        [rows]="10"
+        [rowsPerPageOptions]="[10, 25, 50]"
+        styleClass="p-datatable-gridlines p-datatable-striped" 
+        [tableStyle]="{ 'min-width': '50rem' }">
+
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <th *ngFor="let col of columns">
+                    {{ col.header }}
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+            <tr>
+                <td *ngFor="let col of columns">
+                    {{ rowData[col.field] }}
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+<br>
+
+<h3>4. Dynamic columns table with pagination loading data from a mock json</h3>
+<div class="table-container">
+    <p-table 
+        [columns]="cols" 
+        [value]="products2"
+        [paginator]="true"
+        [rows]="10"
+        styleClass="p-datatable-gridlines p-datatable-striped" 
+        [tableStyle]="{ 'min-width': '50rem' }"
+        [rowsPerPageOptions]="[10, 25, 50]">
+
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <th *ngFor="let col of columns">
+                    {{ col.header }}
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+            <tr>
+                <td *ngFor="let col of columns">
+                    {{ rowData[col.field] }}
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+<br>
+
+<h3>5. Dynamic columns table scrollable</h3>
+<div class="table-container">
+    <p-table 
+        [columns]="cols" 
+        [value]="products2"
+        [paginator]="true"
+        [rows]="10"
+        styleClass="p-datatable-gridlines p-datatable-striped" 
+        [tableStyle]="{ 'min-width': '50rem' }"
+        [rowsPerPageOptions]="[10, 25, 50]"
+        [scrollable]="true" 
+        scrollHeight="500px">
+
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+                <th *ngFor="let col of columns">
+                    {{ col.header }}
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+            <tr>
+                <td *ngFor="let col of columns">
+                    {{ rowData[col.field] }}
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+<br>
+
+<h3>6. Dynamic columns table with template header</h3>
+<div class="table-container">
+    <p-table 
+        [columns]="cols" 
+        [value]="products2"
+        [paginator]="true"
+        [rows]="10"
+        styleClass="p-datatable-gridlines p-datatable-striped" 
+        [tableStyle]="{ 'min-width': '50rem' }"
+        [rowsPerPageOptions]="[10, 25, 50]">
+
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Heading</th>
+                <th>Heading</th>
+                <th>Heading</th>
+                <th>Heading</th>
+                <th>Heading</th>
+                <th>Heading</th>
+            </tr>
+            <tr>
+                <th>Heading</th>
+                <th></th>
+                <th>Heading</th>
+                <th>Heading</th>
+                <th>Heading</th>
+                <th>Heading</th>
+            </tr>
+            <tr>
+                <th>Heading</th>
+                <th></th>
+                <th>Heading</th>
+                <th>Heading</th>
+                <th>Heading</th>
+                <th></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+            <tr>
+                <td *ngFor="let col of columns">
+                    {{ rowData[col.field] }}
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+<br>
+
+<h3>7. Dynamic columns table with column groups</h3>
+<div class="table-container">
+    <p-table 
+        [columns]="cols" 
+        [value]="products2"
+        [paginator]="true"
+        [rows]="10"
+        styleClass="p-datatable-gridlines p-datatable-striped" 
+        [tableStyle]="{ 'min-width': '50rem' }"
+        [rowsPerPageOptions]="[10, 25, 50]">
+
+        <ng-template pTemplate="header">
+            <tr>
+                <th rowspan="3">Product</th>
+                <th colspan="4">Sale Rate</th>
+            </tr>
+            <tr>
+                <th colspan="2">Sales</th>
+                <th colspan="2">Profits</th>
+            </tr>
+            <tr>
+                <th>Last Year</th>
+                <th>This Year</th>
+                <th>Last Year</th>
+                <th>This Year</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+            <tr>
+                <td *ngFor="let col of columns">
+                    {{ rowData[col.field] }}
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+<br>
