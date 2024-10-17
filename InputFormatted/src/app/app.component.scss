@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+h3 {
+    font-family: Consolas;
+}
+
+input,
+p {
+    margin: 1rem;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.toggle-switch {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-switch.active {
+    background-color: #4caf50;
+}
+
+.slider {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    background-color: blue;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.toggle-switch.active .slider {
+    transform: translateX(31px);
+}

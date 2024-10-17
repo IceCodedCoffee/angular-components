@@ -1,0 +1,12 @@
+<h3>1. [(ngModel)] Two-Way-Binding: Input to uppercase</h3>
+<input [(ngModel)]="inputText" (input)="toUpperCase()" type="text" placeholder="Enter text please">
+<p>{{formattedText}}<p>
+<br>
+
+<h3>2. [(ngModel)] Two-Way-Binding: Input to uppercase with toggle</h3>
+<input [(ngModel)]="inputText2" (input)="renderText()" type="text" placeholder="Enter text please">
+<div class="toggle-switch" [ngClass]="[uppercase ? 'active' : '']" (click)="toggleUpperCase()">
+  <span class="slider"></span>
+</div>
+<p>{{formattedText2}}<p>
+<br>
