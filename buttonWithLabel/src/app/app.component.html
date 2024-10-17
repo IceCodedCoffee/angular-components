@@ -1,0 +1,96 @@
+<h3>1. [class.className] Property-Binding: Applying a single class depending on a condition</h3>
+<button (click)="ToggleLabelColor()" name="button">Press to change label color</button>
+<label [class.custom-label-color]="changeLabelColor">object syntax</label>
+<label>Not available with array syntax</label>
+<label>Not available with string syntax</label>
+<br>
+
+<h3>2. [class.className] Property-Binding: Applying a single class without condition</h3>
+<button (click)="ToggleLabelColor()" name="button" disabled>Press to change label color</button>
+<label>Not available without condition</label>
+<label>Not available without condition</label>
+<label>Not available without condition</label>
+<br>
+
+<h3>3. [style.styleName] Property-Binding: Applying a single style depending on a condition</h3>
+<button (click)="ToggleLabelFont()" name="button">Press to change label font</button>
+<label>Not available with object syntax</label>
+<label>Not available with array syntax</label>
+<label [style.font-family]="changeLabelFont ? 'Consolas' : '' ">string syntax</label>
+<br>
+
+<h3>4. [style.styleName] Property-Binding: Applying a single style without condition</h3>
+<button (click)="ToggleLabelFont()" name="button" disabled>Press to change label font size</button>
+<label>Not available without condition</label>
+<label>Not available without condition</label>
+<label [style.font-size]="'0.85rem'">string syntax</label>
+<br>
+
+<h3>5. [attr.attributeName] Attribute-Binding: Changing an html attribute value depending on a condition</h3>
+<button (click)="ToggleLabelVisibility()" name="button">Press to change visibility</button>
+<label>Not available with object syntax</label>
+<label>Not available with array syntax</label>
+<label [hidden]="changeVisibility ? true : null ">string syntax</label>
+<br>
+
+<h3>6. [attr.attributeName] Attribute-Binding: Changing an html attribute value without condition</h3>
+<button (click)="ToggleLabelVisibility()" name="button" disabled>Press to change visibility</button>
+<label>Not available without condition</label>
+<label>Not available without condition</label>
+<label [hidden]="true">string syntax</label>
+<br>
+
+<h3>7. [ngClass] Attribute-Directive: Applying several classes depending on a condition</h3>
+<button (click)="ToggleLabelColor()" name="button">Press to change label color</button>
+<label [ngClass]="{'custom-label-color': changeLabelColor, 'custom-label-bg': changeLabelBgColor }">object
+  syntax</label>
+<label [ngClass]="[changeLabelColor ? 'custom-label-color': '', changeLabelBgColor ? 'custom-label-bg': '' ]">array
+  syntax</label>
+<label
+  [ngClass]="(changeLabelColor ? 'custom-label-color': '') + ' ' + (changeLabelBgColor ? 'custom-label-bg': '') ">string
+  syntax</label>
+<br>
+
+<h3>8. [ngClass] Attribute-Directive: Applying several classes depending on condition variants</h3>
+<button (click)="ToggleLabelColor()" name="button">Press to change label color</button>
+<label
+  [ngClass]="{'custom-label-color': changeLabelColor && changeLabel2ndCondition, 'custom-label-bg': changeLabelBgColor && !changeLabel3rdCondition}">object
+  syntax</label>
+<label
+  [ngClass]="[changeLabelColor && changeLabel2ndCondition ? 'custom-label-color': '', changeLabelBgColor && !changeLabel3rdCondition ? 'custom-label-bg': '' ]">array
+  syntax</label>
+<label
+  [ngClass]="(changeLabelColor && changeLabel2ndCondition ? 'custom-label-color': '') + ' ' + (changeLabelBgColor && !changeLabel3rdCondition ? 'custom-label-bg': '') ">string
+  syntax</label>
+<br>
+
+<h3>9. [ngClass] Attribute-Directive: Applying several classes without condition</h3>
+<button (click)="ToggleLabelColor()" name="button" disabled>Press to change label color</button>
+<label>Object syntax not available</label>
+<label [ngClass]="['custom-label-color', 'custom-label-bg']">array syntax</label>
+<label [ngClass]="'custom-label-color custom-label-bg'">string syntax</label>
+<br>
+
+<h3>10. [ngStyle] Attribute-Directive: Applying several styles depending on a condition</h3>
+<button (click)="ToggleLabelFont()" name="button">Press to change label font</button>
+<label [ngStyle]="{'font-family': changeLabelFont ? 'Arial': '', 'font-size': changeLabelFontSize ? '1rem': ''}">object
+  syntax</label>
+<label>Array syntax not available</label>
+<label>String syntax not available</label>
+<br>
+
+<h3>11. [ngStyle] Attribute-Directive: Applying several styles without condition</h3>
+<button (click)="ToggleLabelFont()" name="button" disabled>Press to change label font</button>
+<label [ngStyle]="{'font-family':  'Arial', 'font-size': '1rem'}">object syntax</label>
+<label>Array syntax not available</label>
+<label>String syntax not available</label>
+<br>
+
+<h3>10. [textContent] Property-Binding</h3>
+<button (click)="ToggleLabelText()" name="button">Press to change label text</button>
+<label [textContent]="changeLabelText ? newText : originalText"></label>
+<br>
+
+<h3>11. [&#64;ViewChild] Decorator-Method</h3>
+<button (click)="ToggleLabelTextViewChild()" name="button">Press to change label text</button>
+<label #label></label>

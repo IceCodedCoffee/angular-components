@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+
+h3 {
+    font-family: Consolas;
+}
+
+button,
+label {
+    margin: 1rem;
+    padding: 0.5rem;
+    width: 300px;
+    font-size: 1.25rem;
+}
+
+label {
+    min-width: 285px;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: green;
+}
+
+.custom-label-color {
+    color: red;
+}
+
+.custom-label-bg {
+    background-color: black;
+}
