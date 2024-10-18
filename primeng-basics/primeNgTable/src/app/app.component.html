@@ -1,29 +1,31 @@
 <h3>1. Basic table</h3>
 <div class="table-container">
-    <p-table [value]="products" styleClass="p-datatable-gridlines p-datatable-striped" [tableStyle]="{ 'min-width': '50rem' }">
-      <ng-template pTemplate="header">
-          <tr>
-              <th>Code <br><br> Test <br> Test</th>
-              <th>Name</th>
-              <th>Category</th>
-              <th>Quantity</th>
-          </tr>
-      </ng-template>
-      <ng-template pTemplate="body" let-product>
-          <tr>
-              <td>{{ product.code }} <br><br> {{ product.code }} <br> {{ product.code }} </td>
-              <td>{{ product.name }}</td>
-              <td>{{ product.category}}</td>
-              <td>{{ product.quantity }}</td>
-          </tr>
-      </ng-template>
+    <p-table [value]="products" styleClass="p-datatable-gridlines p-datatable-striped"
+        [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Code <br><br> Test <br> Test</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Quantity</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr>
+                <td>{{ product.code }} <br><br> {{ product.code }} <br> {{ product.code }} </td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.category}}</td>
+                <td>{{ product.quantity }}</td>
+            </tr>
+        </ng-template>
     </p-table>
 </div>
 <br>
 
 <h3>2. Dynamic columns table</h3>
 <div class="table-container">
-    <p-table [columns]="cols" [value]="products" styleClass="p-datatable-gridlines p-datatable-striped" [tableStyle]="{ 'min-width': '50rem' }">
+    <p-table [columns]="cols" [value]="products" styleClass="p-datatable-gridlines p-datatable-striped"
+        [tableStyle]="{ 'min-width': '50rem' }">
         <ng-template pTemplate="header" let-columns>
             <tr>
                 <th *ngFor="let col of columns">
@@ -44,14 +46,8 @@
 
 <h3>3. Dynamic columns table with pagination</h3>
 <div class="table-container">
-    <p-table 
-        [columns]="cols" 
-        [value]="products"
-        [paginator]="true"
-        [rows]="10"
-        [rowsPerPageOptions]="[10, 25, 50]"
-        styleClass="p-datatable-gridlines p-datatable-striped" 
-        [tableStyle]="{ 'min-width': '50rem' }">
+    <p-table [columns]="cols" [value]="products" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10, 25, 50]"
+        styleClass="p-datatable-gridlines p-datatable-striped" [tableStyle]="{ 'min-width': '50rem' }">
 
         <ng-template pTemplate="header" let-columns>
             <tr>
@@ -73,13 +69,8 @@
 
 <h3>4. Dynamic columns table with pagination loading data from a mock json</h3>
 <div class="table-container">
-    <p-table 
-        [columns]="cols" 
-        [value]="products2"
-        [paginator]="true"
-        [rows]="10"
-        styleClass="p-datatable-gridlines p-datatable-striped" 
-        [tableStyle]="{ 'min-width': '50rem' }"
+    <p-table [columns]="cols" [value]="products2" [paginator]="true" [rows]="10"
+        styleClass="p-datatable-gridlines p-datatable-striped" [tableStyle]="{ 'min-width': '50rem' }"
         [rowsPerPageOptions]="[10, 25, 50]">
 
         <ng-template pTemplate="header" let-columns>
@@ -102,16 +93,9 @@
 
 <h3>5. Dynamic columns table scrollable</h3>
 <div class="table-container">
-    <p-table 
-        [columns]="cols" 
-        [value]="products2"
-        [paginator]="true"
-        [rows]="10"
-        styleClass="p-datatable-gridlines p-datatable-striped" 
-        [tableStyle]="{ 'min-width': '50rem' }"
-        [rowsPerPageOptions]="[10, 25, 50]"
-        [scrollable]="true" 
-        scrollHeight="500px">
+    <p-table [columns]="cols" [value]="products2" [paginator]="true" [rows]="10"
+        styleClass="p-datatable-gridlines p-datatable-striped" [tableStyle]="{ 'min-width': '50rem' }"
+        [rowsPerPageOptions]="[10, 25, 50]" [scrollable]="true" scrollHeight="500px">
 
         <ng-template pTemplate="header" let-columns>
             <tr>
@@ -132,14 +116,9 @@
 <br>
 
 <h3>6. Dynamic columns table with template header</h3>
-<div class="table-container">
-    <p-table 
-        [columns]="cols" 
-        [value]="products2"
-        [paginator]="true"
-        [rows]="10"
-        styleClass="p-datatable-gridlines p-datatable-striped" 
-        [tableStyle]="{ 'min-width': '50rem' }"
+<div class="table-container-6">
+    <p-table [columns]="cols" [value]="products2" [paginator]="true" [rows]="10"
+        styleClass="p-datatable-gridlines p-datatable-striped" [tableStyle]="{ 'min-width': '50rem' }"
         [rowsPerPageOptions]="[10, 25, 50]">
 
         <ng-template pTemplate="header">
@@ -181,13 +160,8 @@
 
 <h3>7. Dynamic columns table with column groups</h3>
 <div class="table-container">
-    <p-table 
-        [columns]="cols" 
-        [value]="products2"
-        [paginator]="true"
-        [rows]="10"
-        styleClass="p-datatable-gridlines p-datatable-striped" 
-        [tableStyle]="{ 'min-width': '50rem' }"
+    <p-table [columns]="cols" [value]="products2" [paginator]="true" [rows]="10"
+        styleClass="p-datatable-gridlines p-datatable-striped" [tableStyle]="{ 'min-width': '50rem' }"
         [rowsPerPageOptions]="[10, 25, 50]">
 
         <ng-template pTemplate="header">
@@ -210,6 +184,137 @@
             <tr>
                 <td *ngFor="let col of columns">
                     {{ rowData[col.field] }}
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+<br>
+
+<h3>8. Multi field multi-sortable table</h3>
+<div class="table-container-8">
+    <p-table 
+        [columns]="cols" 
+        [value]="products3" 
+        [paginator]="true" 
+        [rows]="10"
+        [scrollable]="true" 
+        scrollHeight="600px"
+        styleClass="p-datatable-gridlines p-datatable-striped" 
+        [tableStyle]="{ 'min-width': '50rem' }"
+        [rowsPerPageOptions]="[10, 25, 50]"
+        [sortMode]="'multiple'"
+        >
+
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="details.id">
+                    id
+                    <p-sortIcon field="details.id" />
+                </th>
+                <th pSortableColumn="amount">
+                    amount
+                    <p-sortIcon field="amount" />
+                </th>
+                <th pSortableColumn="warehouse.name">
+                    warehouse
+                    <p-sortIcon field="warehouse.name" />
+                </th>
+                <th pSortableColumn="producer.stock">
+                    stock
+                    <p-sortIcon field="producer.stock" />
+                </th>
+                <th pSortableColumn="extStatus.ordered">
+                    ordered
+                    <p-sortIcon field="extStatus.ordered" />
+                </th>
+                <th pSortableColumn="intStatus.reserved">
+                    reserved
+                    <p-sortIcon field="intStatus.reserved" />
+                </th>
+                <th>
+                    Image
+                </th>
+            </tr>
+            <tr>
+                <th pSortableColumn="details.name">
+                    name
+                    <p-sortIcon field="details.name" />
+                </th>
+                <th></th>
+                <th pSortableColumn="warehouse.compartment">
+                    compartment
+                    <p-sortIcon field="warehouse.compartment" />
+                </th>
+                <th pSortableColumn="producer.name">
+                    producer
+                    <p-sortIcon field="producer.name" />
+                </th>
+                <th pSortableColumn="extStatus.registered">
+                    registered
+                    <p-sortIcon field="extStatus.registered" />
+                </th>
+                <th pSortableColumn="intStatus.produced">
+                    produced
+                    <p-sortIcon field="intStatus.produced" />
+                </th>
+                <th></th>
+            </tr>
+            <tr>
+                <th pSortableColumn="details.addition">
+                    addition
+                    <p-sortIcon field="details.addition" />
+                </th>
+                <th></th>
+                <th pSortableColumn="code">
+                    code
+                    <p-sortIcon field="code" />
+                </th>
+                <th pSortableColumn="producer.id">
+                    producerid
+                    <p-sortIcon field="producer.id" />
+                </th>
+                <th pSortableColumn="demand">
+                    demand
+                    <p-sortIcon field="demand" />
+                </th>
+                <th></th>
+                <th></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+            <tr>
+                <td>
+                    <div class="td">{{ rowData.details.id }}</div>
+                    <div class="td">{{ rowData.details.name }}</div>
+                    <div class="td">{{ rowData.details.addition }}</div>
+                </td>
+                <td>
+                    <div class="td">{{ rowData.amount }}</div>
+                </td>
+                <td>
+                    <div class="td">{{ rowData.warehouse.name }}</div>
+                    <div class="td">{{ rowData.warehouse.compartment }}</div>
+                    <div class="td">{{ rowData.warehouse.code }}</div>
+                </td>
+                <td>
+                    <div class="td">{{ rowData.producer.stock }}</div>
+                    <div class="td">{{ rowData.producer.name }}</div>
+                    <div class="td">{{ rowData.producer.id }}</div>
+                </td>
+                <td>
+                    <div class="td">{{ rowData.extStatus.ordered }}</div>
+                    <div class="td">{{ rowData.extStatus.registered }} </div>
+                    <div class="td">{{ rowData.extStatus.Demand }}</div>
+                </td>
+                <td>
+                    <div class="td">{{ rowData.intStatus.reserved }}</div>
+                    <div class="td">{{ rowData.intStatus.produced }}</div>
+                </td>
+                <td>
+                    <div class="img-container">
+                        <img src="product1.jpg" alt="product1" width="100px" height="100px">
+                    </div>
                 </td>
             </tr>
         </ng-template>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Product } from './product';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -26,12 +28,17 @@ export class AppComponent implements OnInit {
 
   // dynamic column table with pagination and loading data from mock json
   products2: any[] = [];
+  products3: Product[] = [];
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit() {
     this.httpClient.get<any[]>('products.json').subscribe(data => {
       this.products2 = data;
     });
+    this.httpClient.get<any[]>('products3.json').subscribe(data => {
+      this.products3 = data;
+    });
   }
 }
+// Multi field sortable table, call to mock api, see above

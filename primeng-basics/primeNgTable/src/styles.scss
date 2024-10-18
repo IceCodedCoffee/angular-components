@@ -1,22 +1,77 @@
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
 
-$colors: green, red, blue;
+$colors: #03346E, #3f505d, #021526;
 
 .p-datatable {
     .p-datatable-thead {
         tr {
             th {
                 padding: 0.5rem 1rem !important;
-                border: none;
                 color: inherit;
             }
         }
 
         @for $i from 1 through 3 {
             tr:nth-child(#{$i}) {
-              color: nth($colors, $i);
+                color: nth($colors, $i);
             }
         }
     }
-} 
+}
+
+.table-container-6 {
+    .p-datatable {
+        .p-datatable-thead {
+            tr {
+                th {
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+.table-container-8 {
+    .p-datatable {
+        border: 2px solid black;
+        border-collapse: collapse;
+
+        .p-datatable-thead {
+            tr {
+                th {
+                    border: none;
+                    font-size: 1.05rem;
+                }
+            }
+        }
+
+        .p-datatable-tbody {
+            tr {
+                td {
+                    div.td {
+                        padding: 0 0 0.5rem 0;
+                    }
+
+                    div.td:only-child {
+                        position: relative;
+                        top: -25px;
+                    }
+                }
+
+                td:last-child {
+                    div.td {
+                        position: relative;
+                        top: -15px;
+                    }
+                }
+            }
+
+            @for $i from 1 through 3 {
+                div.td:nth-child(#{$i}) {
+                    color: nth($colors, $i);
+                }
+            }
+        }
+    }
+}
