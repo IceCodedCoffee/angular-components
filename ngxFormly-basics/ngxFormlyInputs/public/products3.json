@@ -1,0 +1,272 @@
+[
+    {
+        "details": {
+            "id": 1,
+            "name": "Gadget Pro",
+            "addition": "Advanced Model"
+        },
+        "amount": 320,
+        "warehouse": {
+            "name": "Central Depot",
+            "compartment": "Sector 4",
+            "code": "CDX-54J"
+        },
+        "producer": {
+            "stock": 1500,
+            "name": "Tech Innovations Inc.",
+            "id": 301
+        },
+        "extStatus": {
+            "ordered": true,
+            "registered": false,
+            "Demand": "400"
+        },
+        "intStatus": {
+            "reserved": 75,
+            "produced": "22"
+        }
+    },
+    {
+        "details": {
+            "id": 2,
+            "name": "Eco-Friendly Bottle",
+            "addition": "Sustainable Series"
+        },
+        "amount": 200,
+        "warehouse": {
+            "name": "Green Warehouse",
+            "compartment": "Eco Zone",
+            "code": "GW-77L"
+        },
+        "producer": {
+            "stock": 950,
+            "name": "Eco Goods Co.",
+            "id": 302
+        },
+        "extStatus": {
+            "ordered": false,
+            "registered": true,
+            "Demand": "300"
+        },
+        "intStatus": {
+            "reserved": 30,
+            "produced": "15"
+        }
+    },
+    {
+        "details": {
+            "id": 3,
+            "name": "Ultra Speaker",
+            "addition": "Bass Boosted"
+        },
+        "amount": 180,
+        "warehouse": {
+            "name": "Sound Station",
+            "compartment": "Audio Hub",
+            "code": "SS-22P"
+        },
+        "producer": {
+            "stock": 1200,
+            "name": "Audio Solutions Ltd.",
+            "id": 303
+        },
+        "extStatus": {
+            "ordered": true,
+            "registered": true,
+            "Demand": "500"
+        },
+        "intStatus": {
+            "reserved": 50,
+            "produced": "30"
+        }
+    },
+    {
+        "details": {
+            "id": 4,
+            "name": "Smartwatch 3000",
+            "addition": "Fitness Tracker"
+        },
+        "amount": 250,
+        "warehouse": {
+            "name": "Tech Hub",
+            "compartment": "Wearables",
+            "code": "TH-88F"
+        },
+        "producer": {
+            "stock": 800,
+            "name": "Future Gadgets Inc.",
+            "id": 304
+        },
+        "extStatus": {
+            "ordered": false,
+            "registered": true,
+            "Demand": "600"
+        },
+        "intStatus": {
+            "reserved": 40,
+            "produced": "20"
+        }
+    },
+    {
+        "details": {
+            "id": 5,
+            "name": "Portable Blender",
+            "addition": "On-the-Go Series"
+        },
+        "amount": 140,
+        "warehouse": {
+            "name": "Kitchen Essentials",
+            "compartment": "Small Appliances",
+            "code": "KE-99B"
+        },
+        "producer": {
+            "stock": 600,
+            "name": "Kitchenware Solutions",
+            "id": 305
+        },
+        "extStatus": {
+            "ordered": true,
+            "registered": false,
+            "Demand": "200"
+        },
+        "intStatus": {
+            "reserved": 20,
+            "produced": "18"
+        }
+    },
+    {
+        "details": {
+            "id": 6,
+            "name": "Wireless Headphones",
+            "addition": "Noise Cancelling"
+        },
+        "amount": 350,
+        "warehouse": {
+            "name": "Electro Zone",
+            "compartment": "Audio Gear",
+            "code": "EZ-66T"
+        },
+        "producer": {
+            "stock": 1300,
+            "name": "SoundWave Corp.",
+            "id": 306
+        },
+        "extStatus": {
+            "ordered": false,
+            "registered": true,
+            "Demand": "800"
+        },
+        "intStatus": {
+            "reserved": 35,
+            "produced": "29"
+        }
+    },
+    {
+        "details": {
+            "id": 7,
+            "name": "Gaming Mouse X",
+            "addition": "Precision Series"
+        },
+        "amount": 220,
+        "warehouse": {
+            "name": "Game Central",
+            "compartment": "Gaming Gear",
+            "code": "GC-13D"
+        },
+        "producer": {
+            "stock": 500,
+            "name": "Gaming Gear Ltd.",
+            "id": 307
+        },
+        "extStatus": {
+            "ordered": true,
+            "registered": false,
+            "Demand": "400"
+        },
+        "intStatus": {
+            "reserved": 20,
+            "produced": "15"
+        }
+    },
+    {
+        "details": {
+            "id": 8,
+            "name": "Electric Kettle",
+            "addition": "Quick Boil"
+        },
+        "amount": 190,
+        "warehouse": {
+            "name": "Home Appliances",
+            "compartment": "Cooking Gear",
+            "code": "HA-24H"
+        },
+        "producer": {
+            "stock": 950,
+            "name": "Home Comforts Co.",
+            "id": 308
+        },
+        "extStatus": {
+            "ordered": false,
+            "registered": true,
+            "Demand": "350"
+        },
+        "intStatus": {
+            "reserved": 25,
+            "produced": "12"
+        }
+    },
+    {
+        "details": {
+            "id": 9,
+            "name": "Fitness Tracker",
+            "addition": "Heart Rate Monitor"
+        },
+        "amount": 300,
+        "warehouse": {
+            "name": "Wellness Depot",
+            "compartment": "Health Tech",
+            "code": "WD-19K"
+        },
+        "producer": {
+            "stock": 700,
+            "name": "FitLife Technologies",
+            "id": 309
+        },
+        "extStatus": {
+            "ordered": true,
+            "registered": true,
+            "Demand": "500"
+        },
+        "intStatus": {
+            "reserved": 45,
+            "produced": "20"
+        }
+    },
+    {
+        "details": {
+            "id": 10,
+            "name": "Robotic Vacuum",
+            "addition": "Smart Clean"
+        },
+        "amount": 400,
+        "warehouse": {
+            "name": "Home Robotics",
+            "compartment": "Automation",
+            "code": "HR-31A"
+        },
+        "producer": {
+            "stock": 1100,
+            "name": "Smart Home Innovations",
+            "id": 310
+        },
+        "extStatus": {
+            "ordered": false,
+            "registered": true,
+            "Demand": "600"
+        },
+        "intStatus": {
+            "reserved": 60,
+            "produced": "32"
+        }
+    }
+]
