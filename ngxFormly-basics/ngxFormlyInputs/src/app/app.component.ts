@@ -18,4 +18,9 @@ export class AppComponent implements OnInit {
       this.products3 = data;
     });
   }
+
+  handleInput(value: string) {
+    console.log('Input value received:', value);
+    // Add your logic here to handle the input value
+  }
 }

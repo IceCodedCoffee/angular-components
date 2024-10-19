@@ -6,16 +6,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { appConfig } from './app.config';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormlyPrimeNGModule } from '@ngx-formly/primeng';
+import { FormlyModule } from '@ngx-formly/core';
+import { FormlyInputActionComponent } from './formly-input-action/formly-input-action.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FormlyInputActionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     TableModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormlyModule.forRoot(),
+    FormlyPrimeNGModule
   ],
   providers: [appConfig.providers],
   bootstrap: [AppComponent]

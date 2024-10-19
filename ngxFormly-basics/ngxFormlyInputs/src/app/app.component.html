@@ -111,7 +111,7 @@
                 <td>
                     <div class="td">{{ rowData.extStatus.ordered }}</div>
                     <div class="td">{{ rowData.extStatus.registered }} </div>
-                    <div class="td">{{ rowData.extStatus.Demand }}</div>
+                    <div class="td"><app-formly-input-action (submit)="handleInput($event)"></app-formly-input-action></div>
                 </td>
                 <td>
                     <div class="td">{{ rowData.intStatus.reserved }}</div>
