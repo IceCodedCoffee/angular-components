@@ -14,6 +14,9 @@
 
         <ng-template pTemplate="header">
             <tr>
+                <th>
+                    Image
+                </th>
                 <th pSortableColumn="details.id">
                     id
                     <p-sortIcon field="details.id" />
@@ -39,10 +42,11 @@
                     <p-sortIcon field="intStatus.reserved" />
                 </th>
                 <th>
-                    Image
+                    Actions
                 </th>
             </tr>
             <tr>
+                <th></th>
                 <th pSortableColumn="details.name">
                     name
                     <p-sortIcon field="details.name" />
@@ -67,6 +71,7 @@
                 <th></th>
             </tr>
             <tr>
+                <th></th>
                 <th pSortableColumn="details.addition">
                     addition
                     <p-sortIcon field="details.addition" />
@@ -80,10 +85,7 @@
                     producerid
                     <p-sortIcon field="producer.id" />
                 </th>
-                <th pSortableColumn="demand">
-                    demand
-                    <p-sortIcon field="demand" />
-                </th>
+                <th></th>
                 <th></th>
                 <th></th>
             </tr>
@@ -91,35 +93,59 @@
         <ng-template pTemplate="body" let-rowData let-columns="columns">
             <tr>
                 <td>
-                    <div class="td">{{ rowData.details.id }}</div>
-                    <div class="td">{{ rowData.details.name }}</div>
-                    <div class="td">{{ rowData.details.addition }}</div>
+                    <div class="td-flex">
+                        <div class="img-container">
+                            <img src="product1.jpg" alt="product1" width="100px" height="100px">
+                        </div>
+                    </div>
                 </td>
                 <td>
-                    <div class="td">{{ rowData.amount }}</div>
+                    <div class="td-flex">
+                        <div class="td">{{ rowData.details.id }}</div>
+                        <div class="td">{{ rowData.details.name }}</div>
+                        <div class="td">{{ rowData.details.addition }}</div>
+                    </div>
                 </td>
                 <td>
-                    <div class="td">{{ rowData.warehouse.name }}</div>
-                    <div class="td">{{ rowData.warehouse.compartment }}</div>
-                    <div class="td">{{ rowData.warehouse.code }}</div>
+                    <div class="td-flex">
+                        <div class="td">{{ rowData.amount }}</div>
+                        <div class="td"></div>
+                        <div class="td"></div>
+                    </div>
                 </td>
                 <td>
-                    <div class="td">{{ rowData.producer.stock }}</div>
-                    <div class="td">{{ rowData.producer.name }}</div>
-                    <div class="td">{{ rowData.producer.id }}</div>
+                    <div class="td-flex">
+                        <div class="td">{{ rowData.warehouse.name }}</div>
+                        <div class="td">{{ rowData.warehouse.compartment }}</div>
+                        <div class="td">{{ rowData.warehouse.code }}</div>
+                    </div>
                 </td>
                 <td>
-                    <div class="td">{{ rowData.extStatus.ordered }}</div>
-                    <div class="td">{{ rowData.extStatus.registered }} </div>
-                    <div class="td"><app-formly-input-action (submit)="handleInput($event)"></app-formly-input-action></div>
+                    <div class="td-flex">
+                        <div class="td">{{ rowData.producer.stock }}</div>
+                        <div class="td">{{ rowData.producer.name }}</div>
+                        <div class="td">{{ rowData.producer.id }}</div>
+                    </div>
                 </td>
                 <td>
-                    <div class="td">{{ rowData.intStatus.reserved }}</div>
-                    <div class="td">{{ rowData.intStatus.produced }}</div>
+                    <div class="td-flex">
+                        <div class="td">{{ rowData.extStatus.ordered }}</div>
+                        <div class="td">{{ rowData.extStatus.registered }}</div>
+                        <div class="td"></div>
+                    </div>
                 </td>
                 <td>
-                    <div class="img-container">
-                        <img src="product1.jpg" alt="product1" width="100px" height="100px">
+                    <div class="td-flex">
+                        <div class="td">{{ rowData.intStatus.reserved }}</div>
+                        <div class="td">{{ rowData.intStatus.produced }}</div>
+                        <div class="td"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="td-flex">
+                        <div class="td"><p-button icon="pi pi-print"/></div>
+                        <div class="td"></div>
+                        <div class="td"><app-formly-input-action (submit)="handleInput($event)"></app-formly-input-action></div>
                     </div>
                 </td>
             </tr>

@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyPrimeNGModule } from '@ngx-formly/primeng';
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyInputActionComponent } from './formly-input-action/formly-input-action.component';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormlyInputActionComponent } from './formly-input-action/formly-input-a
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormlyModule.forRoot(),
-    FormlyPrimeNGModule
+    FormlyPrimeNGModule, 
+    ButtonModule
   ],
   providers: [appConfig.providers],
   bootstrap: [AppComponent]

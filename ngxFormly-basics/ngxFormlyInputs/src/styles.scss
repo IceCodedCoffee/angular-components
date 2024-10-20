@@ -1,24 +1,10 @@
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
 
 $colors: #03346E, #3f505d, #021526;
-
-.p-datatable {
-    .p-datatable-thead {
-        tr {
-            th {
-                padding: 0.5rem 1rem !important;
-                color: inherit;
-            }
-        }
-
-        @for $i from 1 through 3 {
-            tr:nth-child(#{$i}) {
-                color: nth($colors, $i);
-            }
-        }
-    }
-}
+$print-btn-bg: #75bb75;
+$order-btn-bg: #75bb75;
 
 .table-container-1 {
     .p-datatable {
@@ -28,30 +14,74 @@ $colors: #03346E, #3f505d, #021526;
         .p-datatable-thead {
             tr {
                 th {
+                    padding: 0.5rem 1rem !important;
+                    color: inherit;
                     border: none;
                     font-size: 1.05rem;
+                }
+            }
+
+            @for $i from 1 through 3 {
+                tr:nth-child(#{$i}) {
+                    color: nth($colors, $i);
                 }
             }
         }
 
         .p-datatable-tbody {
             tr {
-                td {
-                    div.td {
-                        padding: 0 0 0.5rem 0;
-                    }
 
-                    div.td:only-child {
-                        position: relative;
-                        top: -25px;
+                td {
+                    min-width: 150px;
+                    height: 150px;
+
+                    .td-flex {
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        div.td {
+                            min-height: 33%;
+                        }
                     }
                 }
 
-                td:last-child {
+                td:nth-child(8) {
+
                     div.td {
-                        position: relative;
-                        top: -15px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: end;
+
+                        button {
+                            padding: 0.5rem;
+                            background-color: blue;
+                        }
+
+                        app-formly-input-action {
+
+                            display: inline-block;
+
+                            form {
+                                display: flex;
+                                flex-direction: row;
+                                gap: 0.3rem;
+
+                                input {
+                                    margin: 0 0.2rem 0 0;
+                                    padding: 0.5rem;
+                                    width: 100%;
+                                }
+
+                                button {
+                                    padding: 0.5rem;
+                                    background-color: green;
+                                }
+                            }
+                        }
                     }
+
                 }
             }
 

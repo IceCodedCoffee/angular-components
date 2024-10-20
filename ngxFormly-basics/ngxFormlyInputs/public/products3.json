@@ -17,8 +17,8 @@
             "id": 301
         },
         "extStatus": {
-            "ordered": true,
-            "registered": false,
+            "ordered": 1,
+            "registered": 0,
             "Demand": "400"
         },
         "intStatus": {
@@ -44,8 +44,8 @@
             "id": 302
         },
         "extStatus": {
-            "ordered": false,
-            "registered": true,
+            "ordered": 0,
+            "registered": 1,
             "Demand": "300"
         },
         "intStatus": {
@@ -71,8 +71,8 @@
             "id": 303
         },
         "extStatus": {
-            "ordered": true,
-            "registered": true,
+            "ordered": 1,
+            "registered": 1,
             "Demand": "500"
         },
         "intStatus": {
@@ -98,8 +98,8 @@
             "id": 304
         },
         "extStatus": {
-            "ordered": false,
-            "registered": true,
+            "ordered": 0,
+            "registered": 1,
             "Demand": "600"
         },
         "intStatus": {
@@ -125,8 +125,8 @@
             "id": 305
         },
         "extStatus": {
-            "ordered": true,
-            "registered": false,
+            "ordered": 1,
+            "registered": 0,
             "Demand": "200"
         },
         "intStatus": {
@@ -152,8 +152,8 @@
             "id": 306
         },
         "extStatus": {
-            "ordered": false,
-            "registered": true,
+            "ordered": 0,
+            "registered": 1,
             "Demand": "800"
         },
         "intStatus": {
@@ -179,8 +179,8 @@
             "id": 307
         },
         "extStatus": {
-            "ordered": true,
-            "registered": false,
+            "ordered": 1,
+            "registered": 0,
             "Demand": "400"
         },
         "intStatus": {
@@ -206,8 +206,8 @@
             "id": 308
         },
         "extStatus": {
-            "ordered": false,
-            "registered": true,
+            "ordered": 0,
+            "registered": 1,
             "Demand": "350"
         },
         "intStatus": {
@@ -233,8 +233,8 @@
             "id": 309
         },
         "extStatus": {
-            "ordered": true,
-            "registered": true,
+            "ordered": 1,
+            "registered": 1,
             "Demand": "500"
         },
         "intStatus": {
@@ -260,8 +260,8 @@
             "id": 310
         },
         "extStatus": {
-            "ordered": false,
-            "registered": true,
+            "ordered": 0,
+            "registered": 1,
             "Demand": "600"
         },
         "intStatus": {

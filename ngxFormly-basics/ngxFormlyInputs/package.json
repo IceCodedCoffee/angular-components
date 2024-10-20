@@ -20,6 +20,7 @@
     "@angular/router": "^18.2.0",
     "@ngx-formly/core": "^6.3.9",
     "@ngx-formly/primeng": "^6.3.9",
+    "primeicons": "^7.0.0",
     "primeng": "^17.18.11",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
